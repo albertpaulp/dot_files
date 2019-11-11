@@ -1,6 +1,3 @@
-syntax on
-filetype plugin indent on
-
 set shell=/usr/local/bin/fish
 set number
 set numberwidth=5
@@ -15,7 +12,9 @@ set ruler
 set nobackup
 set nowritebackup
 set noswapfile
-filetype off
+set backspace=indent,eol,start
+syntax on
+filetype on
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -27,16 +26,22 @@ Plugin 'https://github.com/airblade/vim-gitgutter'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'tpope/vim-fugitive'
-set backspace=indent,eol,start
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
+Plugin 'mhinz/vim-startify'
+Plugin 'wsdjeg/vim-todo'
+Plugin 'aserebryakov/vim-todo-lists'
 call vundle#end()
 
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-let g:Powerline_symbols = 'fancy'
+
+let g:startify_bookmarks = ['~/notes/todo.todo', '~/.vimrc']
 
 autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
 
-map <C-s> :NERDTreeToggle<CR>
+map <ENTER> :NERDTreeToggle<CR>
 map <C-d> :FZF<CR>
 
-highlight ColorColumn ctermbg=gray
+highlight ColorColumn ctermbg=grey
 set colorcolumn=120
