@@ -31,6 +31,8 @@ Plugin 'tpope/vim-rails'
 Plugin 'mhinz/vim-startify'
 Plugin 'wsdjeg/vim-todo'
 Plugin 'aserebryakov/vim-todo-lists'
+Plugin 'rking/ag.vim'
+Plugin 'Yggdroot/indentLine'
 call vundle#end()
 
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -40,8 +42,9 @@ let g:startify_bookmarks = ['~/notes/todo.todo', '~/.vimrc']
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 
-map <ENTER> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 map <C-d> :FZF<CR>
 
 highlight ColorColumn ctermbg=grey
 set colorcolumn=120
+set runtimepath^=~/.vim/bundle/ag
