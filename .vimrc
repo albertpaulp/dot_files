@@ -33,6 +33,7 @@ Plugin 'wsdjeg/vim-todo'
 Plugin 'aserebryakov/vim-todo-lists'
 Plugin 'rking/ag.vim'
 Plugin 'Yggdroot/indentLine'
+Plugin 'doums/darcula'
 call vundle#end()
 
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -44,7 +45,9 @@ autocmd VimEnter * wincmd p
 
 map <C-n> :NERDTreeToggle<CR>
 map <C-d> :FZF<CR>
+map <C-s> :Startify<CR>
 
+colorscheme darcula
 highlight ColorColumn ctermbg=grey
 set colorcolumn=120
 set runtimepath^=~/.vim/bundle/ag
