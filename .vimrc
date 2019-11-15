@@ -14,7 +14,7 @@ set nowritebackup
 set noswapfile
 set backspace=indent,eol,start
 syntax on
-filetype on
+filetype plugin indent on
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
